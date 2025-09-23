@@ -1,0 +1,9 @@
+Create an EC2 instance
+1. Goto EC2 dashboard once logged with the root.
+2. Click on launch the instance on right side.
+3. Write the name you want to give for instance.
+4. Choose the application you want to connect the instancewith.
+5. Select the key pair you created & downloaded in local.
+6. Go to network setting & click on select existing security group. Select the one you created.
+7.  Allow the SSH traffic. 
+8. Click on launch instance. This will create the EC2 instance.

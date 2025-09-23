@@ -1,0 +1,7 @@
+Create IAM user
+1. Type IAM on service search box & hit enter.
+2. Click on users on the left. It will redirect to users page.
+3. Click on create user on right hand.
+4. Give the user name & say next.
+5. Choose the permission how you want to create user. For now I have created as:add user to group. And say next.
+6. Review the user details you enter and click on create user.

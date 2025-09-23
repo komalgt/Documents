@@ -1,0 +1,28 @@
+Steps to Create a Pipeline in AWS
+Open AWS Console
+Go to AWS CodePipeline service.
+Create Pipeline
+Click Create pipeline.
+Pipeline Settings
+Give your pipeline a name (e.g., MySamplePipeline).
+Optionally, create or select a service role (AWS can create one for you).
+Source Stage (Where your code lives)
+Choose the source provider:
+GitHub (v2) → if your repo is on GitHub.
+CodeCommit → if using AWS CodeCommit.
+Amazon S3 → if your code is in an S3 bucket.
+Connect to the repository and branch you want to trigger builds from.
+Build Stage (Compile & test your code)
+Add a build stage.
+Choose AWS CodeBuild as the provider.
+Select an existing CodeBuild project or create a new one (you’ll need a buildspec.yml file).
+Deploy Stage (Optional)
+If you want deployment, add a deploy stage:
+Amazon S3 → static website hosting.
+Amazon ECS → container apps.
+Elastic Beanstalk, CloudFormation, or CodeDeploy for more complex apps.
+If you don’t want deployment yet, you can skip this.
+Review & Create
+Review pipeline settings.
+Click Create pipeline.
+The pipeline will immediately start its first run.

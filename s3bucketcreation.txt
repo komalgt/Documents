@@ -1,0 +1,9 @@
+Create S3 bucket
+
+1. Serach amazon S3 on search bar & then navigate to buckets page.
+2. Click on create bucket on right side.
+3. Select bucket type as general purpose.
+4. Give the bucket name. 
+5. Choose the object ownwership as ACLs enabled.
+6. Uncheck Block all Public access for public visible of file output.
+7. Come to an end & click on create bucket.
