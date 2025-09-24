@@ -1,0 +1,8 @@
+Create github repo.
+Create subfolders as .github/workflow.
+Go inside workflow and add file. Name it as src.yml for example.
+Write code inside the file. Save it.
+later commit the changes.
+
+now go to actions buttong and click on the job that we ran for src.yml.
+It will show the steps as in output which are logs of src.yml.
