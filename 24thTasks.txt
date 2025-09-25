@@ -1,0 +1,54 @@
+
+Manual Approval Step Before Deployment
+
+Create/Configure Environment:
+Go to your repository > Settings > Environments.
+Click “New environment” (e.g., production).
+Add Protection Rule:
+In the environment settings, require reviewers for deployment (choose users or teams who must approve.Ex:komalgt).
+Reference Environment in Workflow:
+Add environment: to your deployment job in your workflow file.
+While you run the job on actions, it will ask for the approval as seen below in screenshot.
+
+
+ 
+
+
+ 
+
+
+
+Step-by-Step: Build and Push Docker Image to DockerHub
+
+1. Set Up GitHub Secrets
+First, in your GitHub repository:
+Go to Settings > Secrets and variables > Actions.
+Add these secrets:
+DOCKERHUB_USERNAME
+DOCKERHUB_TOKEN 
+We can generate a DockerHub Access Token instead of using password.
+2. Create/Update Your GitHub Actions Workflow
+3. We will see docker image on dockerhub.
+https://hub.docker.com/repository/docker/komalgt/my-app/general
+
+Environment Separation 
+1. Store Secrets Securely Per Environment
+Configure secrets per environment so only the right jobs can access relevant credentials.
+GitHub Actions:
+Go to Repo Settings > Environments > [Environment Name] > Secrets.
+2. Define Define Environments in YMl file.
+3. 3. Apply Conditional Job Logic with if command.
+
+
+Integrating CodeQL Into Your Workflow
+
+2. Configure CodeQL in GitHub Actions
+
+Create CodeQL Workflow
+In your repo, add a file at .github/workflows/codeql-analysis.yml:
+Commit & Push.
+As soon as the file is in place, any pushes or PRs will trigger CodeQL analysis.
+Reviewing & Reporting Results:
+Results are published in the Security tab of your GitHub repository.
+Detailed findings: vulnerabilities, errors, and recommendations per file/line.
+
