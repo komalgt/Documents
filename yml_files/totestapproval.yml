@@ -1,0 +1,32 @@
+name: test approvals
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "totestapproval.yml"
+      - ".github/workflows/totestapproval.yml"
+
+  pull_request:
+    branches: [main]
+    paths:
+      - "totestapproval.yml"
+      - ".github/workflows/totestapproval.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: npm install
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: manual_approval 
+    steps:
+      - name: Deploy
+        run: echo "Deploying application..."
