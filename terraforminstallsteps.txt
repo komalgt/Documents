@@ -1,0 +1,21 @@
+
+Installation Steps:
+
+Download the latest Terraform release ZIP for Windows from the official site.
+Unzip it and place the terraform.exe somewhere like C:\Terraform.
+Add this folder to your System PATH (Control Panel > System > Advanced system settings > Environment Variables).
+Verifying Terraform Installation:
+After installation, open a new terminal or command prompt window and type:
+terraform version
+
+
+
+Initialize a new Terraform project directory and create a main.tf file.
+
+Step 1: Create a Project Directory
+Open your terminal and create a directory for your Terraform project:
+mkdir my-terraform-project
+cd my-terraform-project
+Step 2: Create a main.tf File
+Now, create a file named main.tf. Here’s a basic example of a main.tf for initializing an AWS provider:
+
